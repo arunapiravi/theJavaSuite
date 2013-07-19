@@ -11,8 +11,8 @@ Distribution of operations, over the data set:
                                                                             x - x adds x - x
 
 
-i.e, Say if the creates were 1000 items and set ratio was like 0.4, sets-gets happen at ratio 2:3,
-until 1000 items are created, and the first (del-ratio) number of items get deleted, and the next
+i.e, Say if the item-count was set at 1000 items and set ratio was like 0.4, sets-gets happen at ratio
+2:3, until 1000 items are created, and the first (del-ratio) number of items get deleted, and the next
 (append-ratio) number of items get updated with the appends, and the overlapping next (prepend-ratio)
 number of items get updated with prepends, the last (exp-ratio) number of set items are set with an
 expiration time, and a new set of items are added, indicated by the add-count.
