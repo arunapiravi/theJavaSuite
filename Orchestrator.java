@@ -116,19 +116,16 @@ public class Orchestrator {
             Thread _adds = new Thread(_adds_);
             Thread _dels = new Thread(_dels_);
 
-            _sets.start();
-            _gets.start();
-            try {
-                _sets.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            _dels.start();
-            _mods.start();
-            _adds.start();
-            _dels.join();
-            _adds.join();
-            _mods.join();
+            _sets.start();      //Begin sets thread
+            _gets.start();      //Begin gets thread
+            _sets.join();       //Wait for sets thread to complete
+            _dels.start();      //Begin deletes thread
+            _mods.start();      //Begin mods thread
+            _adds.start();      //Begin adds thread
+            _dels.join();       //Wait for deletes thread to complete
+            _adds.join();       //Wait for adds thread to complete
+            _mods.join();       //Wait for mods thread to complete
+            _gets.join();       //Wait for gets thread to complete
 
             client.shutdown();
         }
