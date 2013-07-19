@@ -13,6 +13,6 @@ Structure of operations, over the data set:
 
 
 - Specify test cluster-ops information in test.properties
-- make compile : To complile the program
+- make compile : To compile the program
 - make run : To execute the program
 - make clean : To clean up class files
