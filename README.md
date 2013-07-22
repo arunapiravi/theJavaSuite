@@ -17,7 +17,7 @@ i.e, Say if the item-count was set at 1000 items and set ratio was like 0.4, set
 number of items get updated with prepends, the last (exp-ratio) number of set items are set with an
 expiration time, and a new set of items are added, indicated by the add-count.
 
-
+- Current design: all operations on buckets - sequential
 - Specify test cluster-ops information in test.properties
 - make compile : To compile the program
 - make run : To execute the program
