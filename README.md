@@ -1,7 +1,7 @@
 theJavaSuite
 ============
 
-Distribution of operations, over the data set:
+Distribution of write-operations, over the data set:
 
     x - x - x - x - x - x - x - x - x sets x - x - x - x - x - x - x - x - x
     x - x deletes x - x
