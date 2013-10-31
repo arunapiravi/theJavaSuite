@@ -5,6 +5,9 @@ import java.util.Random;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
+/*
+ * Module that generates JSON data to be loaded
+ */
 
 public class Gen {
     public static JSONObject retrieveJSON(Random gen, Variables V) throws JSONException {

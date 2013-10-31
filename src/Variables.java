@@ -1,7 +1,7 @@
 package src;
 
 /*
- * Module that contains variables needed by other modules
+ * Module that contains variables needed by all other modules
  */
 
 public class Variables {

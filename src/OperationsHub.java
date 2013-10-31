@@ -2,7 +2,6 @@ package src;
 
 import com.couchbase.client.CouchbaseClient;
 
-
 public class OperationsHub {
     public static void runClientOperations(final CouchbaseClient client, final Variables V,
             final String _prefix) throws InterruptedException {
