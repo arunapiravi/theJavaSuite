@@ -14,21 +14,21 @@ import com.couchbase.client.CouchbaseConnectionFactoryBuilder;
 
 public class Orchestrator {
 
-    private static String[] _Nodes = {};		//Servers, Format: server1_ip,server2_ip..
-    private static String _Port = "";			//Couchbase port
-    private static String[] _buckets = {};		//Buckets, Format: bucket1:bucket1passwd,bucket2:bucket2passwd..
-    private static String _prefix = "";			//Key prefixes
+    private static String[] _Nodes = {};        //Servers, Format: server1_ip,server2_ip..
+    private static String _Port = "";           //Couchbase port
+    private static String[] _buckets = {};      //Buckets, Format: bucket1:bucket1passwd,bucket2:bucket2passwd..
+    private static String _prefix = "";         //Key prefixes
     private static boolean _json = false;
     private static int _itemCount = 0;
     private static int _itemSize = 0;
     private static double _setRatio = 0.0;
     private static double _appendRatio = 0.0;
-    private static int _appendSize = 20;		//20 bytes default
+    private static int _appendSize = 20;        //20 bytes default
     private static double _prependRatio = 0.0;
-    private static int _prependSize = 20;		//20 bytes default
+    private static int _prependSize = 20;       //20 bytes default
     private static double _delRatio = 0.0;
     private static double _expRatio = 0.0;
-    private static int _expiration = 600;		//10 minutes default
+    private static int _expiration = 600;       //10 minutes default
     private static int _addCount = 0;
     private static boolean _loop = false;       //to continuously loop the load
 
