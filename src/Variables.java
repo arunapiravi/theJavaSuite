@@ -1,3 +1,4 @@
+package src;
 
 /*
  * Module that contains variables needed by other modules
