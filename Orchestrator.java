@@ -50,10 +50,7 @@ public class Orchestrator {
                 _appendRatio, _appendSize, _prependRatio, _prependSize,
                 _delRatio, _expRatio, _expiration, _addCount);
 
-        int _x_ = 0;
-
-        while (_x_ < 1) {
-
+        do {
             Thread[] _control = new Thread[_buckets.length];
             for (int i=0; i<_buckets.length; i++) {
                 String bucketname = _buckets[i].split(":")[0];
@@ -73,27 +70,18 @@ public class Orchestrator {
                         }
                     }
                 };
-
                 _control[i] = new Thread(_control_);
                 _control[i].start();
-
             }
-
             for (int j=0; j<_buckets.length; j++) {
                 _control[j].join();
             }
-
-            if (!_loop)
-                _x_++;
-
-        }
+        } while(_loop);
 
         System.out.println(" ........... done ...........");
         System.exit(0);
 
     }
-
-
 
     private static CouchbaseClient connect(String _addr, String _bucketName, String _bucketPasswd) {
         /*
