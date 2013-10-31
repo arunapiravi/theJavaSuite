@@ -1,11 +1,4 @@
-import src.Variables;
-import src.OperationsHub;
-import src.Sets;
-import src.Gets;
-import src.Adds;
-import src.Deletes;
-import src.Mods;
-import src.Gen;
+import src.*;
 
 import java.io.File;
 import java.io.FileInputStream;
