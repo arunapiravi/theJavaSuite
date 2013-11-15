@@ -32,7 +32,7 @@ Setting test.properties:
     - prefix..............prefix for keys generated
     - json................boolean value for json or binary
     - item-count..........no. of items to be created
-    - item-size...........size of the items to be created
+    - item-size...........size of each item created
     - set-ratio...........ratio of sets to gets till item-count reached
     - append-ratio........ratio of item-count that will be updated with appends
     - append-size.........extra size to be appended to each item
@@ -43,4 +43,4 @@ Setting test.properties:
     - expiration..........expiration time for the items set with an expiry time
     - add-count...........no. of items to be added extra
     - loop................boolean value to loop the load infinitely or not
-    - check-flag..........boolean value to store the sets to verify a set success
+    - check-flag..........boolean value to store the sets to later on verify a set success
