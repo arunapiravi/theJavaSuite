@@ -23,7 +23,8 @@ number of items get updated with prepends, and a new set of items are added, ind
 - make run : To execute the program
 - make clean : To clean up class files
 
-    Setting test.properties:
+=======================
+Setting test.properties:
 
     - nodes...............ip of one node from cluster
     - port................couchbase port
