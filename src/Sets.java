@@ -27,7 +27,9 @@ public class Sets {
             } else {
                 setOp = client.set(key, Gen.retrieveBinary(V));
             }
-            sets.add(setOp);
+            if (V.isCheckEnabled()) {
+                sets.add(setOp);
+            }
         }
 
         for (int i=(V.getItemCount() - items_to_expire); i<V.getItemCount(); i++) {
@@ -38,7 +40,9 @@ public class Sets {
             } else {
                 setOp = client.set(key, V.getExpiration(), Gen.retrieveBinary(V));
             }
-            sets.add(setOp);
+            if (V.isCheckEnabled()) {
+                sets.add(setOp);
+            }
         }
 
         while (!sets.isEmpty()) {

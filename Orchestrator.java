@@ -30,7 +30,9 @@ public class Orchestrator {
     private static double _expRatio = 0.0;
     private static int _expiration = 600;       //10 minutes default
     private static int _addCount = 0;
-    private static boolean _loop = false;       //to continuously loop the load
+    private static boolean _loop = false;       //To continuously loop the load
+    private static boolean _checkFlag = false;  //Yes or no to store all set responses to later
+                                                //verify whether the command was successful or not
 
     public static void main(String args[]) throws InterruptedException {
 
@@ -48,7 +50,7 @@ public class Orchestrator {
 
         final Variables V = new Variables (_json, _itemCount, _itemSize, _setRatio,
                 _appendRatio, _appendSize, _prependRatio, _prependSize,
-                _delRatio, _expRatio, _expiration, _addCount);
+                _delRatio, _expRatio, _expiration, _addCount, _checkFlag);
 
         do {
             Thread[] _control = new Thread[_buckets.length];
@@ -142,6 +144,8 @@ public class Orchestrator {
                 _addCount = (Integer.parseInt(properties.getProperty(key)));
             if (key.equals("loop"))
                 _loop = (Boolean.parseBoolean(properties.getProperty(key)));
+            if (key.equals("check-flag"))
+                _checkFlag = (Boolean.parseBoolean(properties.getProperty(key)));
         }
     }
 }

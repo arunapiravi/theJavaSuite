@@ -17,11 +17,13 @@ public class Variables {
     private double _expRatio;
     private int _expiration;
     private int _addCount;
+    private boolean _checkFlag;
 
     public Variables(boolean _json2, int _itemCount2, int _itemSize2,
             double _setRatio2, double _appendRatio2, int _appendSize2,
             double _prependRatio2, int _prependSize2, double _delRatio2,
-            double _expRatio2, int _expiration2, int _addCount2) {
+            double _expRatio2, int _expiration2, int _addCount2,
+            boolean _checkFlag2) {
         this._json = _json2;
         this._itemCount = _itemCount2;
         this._itemSize = _itemSize2;
@@ -33,7 +35,8 @@ public class Variables {
         this._delRatio = _delRatio2;
         this._expRatio = _expRatio2;
         this._expiration = _expiration2;
-        this._addCount = _addCount2;		
+        this._addCount = _addCount2;
+        this._checkFlag = _checkFlag2;
     }
 
     public boolean isJson() {
@@ -82,5 +85,9 @@ public class Variables {
 
     public int getAddCount() {
         return this._addCount;
+    }
+
+    public boolean isCheckEnabled() {
+        return this._checkFlag;
     }
 }

@@ -22,3 +22,23 @@ number of items get updated with prepends, and a new set of items are added, ind
 - make compile : To compile the program
 - make run : To execute the program
 - make clean : To clean up class files
+
+Setting test.properties:
+    nodes...............ip of one node from cluster
+    port................couchbase port
+    buckets.............list of buckets [format: bucket1:pwd1,bkt2,bkt3:pwd3]
+    prefix..............prefix for keys generated
+    json................boolean value for json or binary
+    item-count..........no. of items to be created
+    item-size...........size of the items to be created
+    set-ratio...........ratio of sets to gets till item-count reached
+    append-ratio........ratio of item-count that will be updated with appends
+    append-size.........extra size to be appended to each item
+    prepend-ratio.......ratio of item-count that will be updated with prepends
+    prepend-size........extra size to be prepended to each item
+    del-ratio...........ratio of item-count to be deleted
+    exp-ratio...........ratio of items set initially to be set with an expiry time
+    expiration..........expiration time for the items set with an expiry time
+    add-count...........no. of items to be added extra
+    loop................boolean value to loop the load infinitely or not
+    check-flag..........boolean value to store the sets to verify a set success

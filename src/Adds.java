@@ -26,7 +26,9 @@ public class Adds {
             } else {
                 addOp = client.add(key, Gen.retrieveBinary(V));
             }
-            adds.add(addOp);
+            if (V.isCheckEnabled()) {
+                adds.add(addOp);
+            }
         }
 
         while (!adds.isEmpty()) {
