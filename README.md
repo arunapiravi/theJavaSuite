@@ -42,5 +42,5 @@ Setting test.properties:
     - exp-ratio...........ratio of items set initially to be set with an expiry time
     - expiration..........expiration time for the items set with an expiry time
     - add-count...........no. of items to be added extra
-    - loop................boolean value to loop the load infinitely or not
-    - check-flag..........boolean value to store the sets to later on verify a set success
+    - loop................boolean value - to loop the load infinitely or not
+    - check-flag..........boolean value - to store return value of a set to later verify the set success
